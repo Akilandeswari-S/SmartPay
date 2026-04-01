@@ -12,7 +12,7 @@ export default function HomeScreen({ navigation }) {
   useFocusEffect(
     useCallback(() => {
       setUserId(GlobalStore.userId || 'user_1');
-      fetch(`http://localhost:3000/api/user/wallet/${GlobalStore.userId}`)
+      fetch(`https://smartpay-backend-js0v.onrender.com/api/user/wallet/${GlobalStore.userId}`)
         .then(res => res.json())
         .then(data => {
           setOnlineBalance(data.onlineBalance || 0);
