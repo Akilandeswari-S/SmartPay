@@ -19,7 +19,7 @@ export default function HomeScreen({ navigation }) {
           setOfflineBalance(data.offlineBalance || 0);
         })
         .catch(e => { setOnlineBalance(25000); setOfflineBalance(2000); });
-      fetch(`http://localhost:3000/api/user/profile/${GlobalStore.userId}`)
+      fetch(`https://smartpay-backend-js0v.onrender.com/api/user/profile/${GlobalStore.userId}`)
         .then(res => res.json())
         .then(data => {
           setUserName(data.name || 'User');
