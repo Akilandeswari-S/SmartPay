@@ -22,7 +22,7 @@ export default function EditProfileScreen({ navigation, route }) {
     setLoading(true);
     setStatusMsg('');
     try {
-      const response = await fetch(`http://localhost:3000/api/user/profile/${GlobalStore.userId}`, {
+      const response = await fetch(`https://smartpay-backend-js0v.onrender.com/api/user/profile/${GlobalStore.userId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: name.trim(), email: email.trim(), dob: dob.trim() })
