@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput, Alert, ActivityIndicator } from 'react-native';
 import { GlobalStore } from '../GlobalStore';
 
-const API = 'http://localhost:3000';
+const API = 'https://smartpay-backend-js0v.onrender.com';
 
 // Reusable user lookup badge
 function UserBadge({ user }) {
