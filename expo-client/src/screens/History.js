@@ -10,7 +10,7 @@ export default function HistoryScreen({ navigation }) {
   useFocusEffect(
     useCallback(() => {
       setLoading(true);
-      fetch(`http://localhost:3000/api/history/${GlobalStore.userId}`)
+      fetch(`https://smartpay-backend-js0v.onrender.com/api/history/${GlobalStore.userId}`)
         .then(res => res.json())
         .then(data => {
           setHistory(data.history || []);
