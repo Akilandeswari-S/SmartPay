@@ -29,7 +29,7 @@ export default function OnlinePayment({ navigation, route }) {
     
     const actualPayeeId = matchedUser?.id || payeeId;
     try {
-      const response = await fetch('http://localhost:3000/api/transfer', {
+      const response = await fetch('https://smartpay-backend-js0v.onrender.com/api/transfer', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ payerId: GlobalStore.userId, payeeId: actualPayeeId, amount: parseInt(amount, 10) })
