@@ -6,6 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("SmartPay Backend Running Successfully 🚀");
+});
+
 const db = new sqlite3.Database('file:ledger.db');
 
 db.serialize(() => {
