@@ -28,7 +28,7 @@ export default function PINVerification({ navigation, route }) {
     setStatus('processing');
 
     try {
-      const response = await fetch('http://localhost:3000/api/user/verify-pin', {
+      const response = await fetch('https://smartpay-backend-js0v.onrender.com/api/user/verify-pin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: GlobalStore.userId, pin: finalPin })
