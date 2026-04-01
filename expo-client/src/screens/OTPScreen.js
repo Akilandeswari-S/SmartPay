@@ -8,7 +8,7 @@ export default function OTPScreen({ navigation, route }) {
 
   const handleVerifyOtp = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/auth/otp', {
+      const response = await fetch('https://smartpay-backend-js0v.onrender.com/api/auth/otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ phone: mobileNumber, otp })
