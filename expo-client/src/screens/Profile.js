@@ -11,7 +11,7 @@ export default function ProfileScreen({ navigation }) {
   useFocusEffect(
     useCallback(() => {
       setLoading(true);
-      fetch(`http://localhost:3000/api/user/profile/${GlobalStore.userId}`)
+      fetch(`https://smartpay-backend-js0v.onrender.com/api/user/profile/${GlobalStore.userId}`)
         .then(res => res.json())
         .then(data => {
           setProfile(data);
