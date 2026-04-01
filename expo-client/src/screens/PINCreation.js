@@ -39,7 +39,7 @@ export default function PINCreation({ navigation, route }) {
     if (pin === finalConfirmPin) {
       // Mock registration API call or proceed to Bank Link
       try {
-        const response = await fetch('http://localhost:3000/api/user/register', {
+        const response = await fetch('https://smartpay-backend-js0v.onrender.com/api/user/register', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
