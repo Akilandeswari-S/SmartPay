@@ -14,7 +14,7 @@ export default function OnlinePayment({ navigation, route }) {
     // Lookup when user enters 10-digit phone or user_id format
     const clean = text.trim();
     if (clean.length >= 6) {
-      fetch(`http://localhost:3000/api/user/lookup/${clean}`)
+      fetch(`https://smartpay-backend-js0v.onrender.com/api/user/lookup/${clean}`)
         .then(res => res.json())
         .then(data => {
           if (data.found) setMatchedUser(data);
