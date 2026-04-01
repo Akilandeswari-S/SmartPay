@@ -14,7 +14,7 @@ export default function HybridWallet({ navigation }) {
 
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:3000/api/user/wallet/transfer', {
+      const response = await fetch('https://smartpay-backend-js0v.onrender.com/api/user/wallet/transfer', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: GlobalStore.userId, direction, amount: amountNum })
