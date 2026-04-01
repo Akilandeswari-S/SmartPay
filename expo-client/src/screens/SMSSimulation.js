@@ -14,7 +14,7 @@ export default function SMSSimulation({ navigation }) {
 
     const clean = text.trim();
     if (clean.length >= 6) {
-      fetch(`http://localhost:3000/api/user/lookup/${clean}`)
+      fetch(`https://smartpay-backend-js0v.onrender.com/api/user/lookup/${clean}`)
         .then(res => res.json())
         .then(data => {
           if (data.found) setMatchedUser(data);
@@ -34,7 +34,7 @@ export default function SMSSimulation({ navigation }) {
     }
     setLoading(true);
     const resolvedPayeeId = matchedUser?.id || payeeId;
-    fetch('http://localhost:3000/settle', {
+    fetch('https://smartpay-backend-js0v.onrender.com/settle', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
